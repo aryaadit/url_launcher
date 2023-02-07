@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget buildRaisedButton(String text, dynamic event) {
-    return RaisedButton(
+    return ElevatedButton(
       onPressed: event,
       child: Text(text),
     );
