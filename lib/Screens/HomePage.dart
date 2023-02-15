@@ -17,13 +17,19 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            buildRaisedButton('Show my Channel', launchURL),
+            buildIconButton('Google', launchGoogle, Icons.search),
             heightSpacer(25.00),
-            buildRaisedButton('Send Email', launchEMAIL),
+            buildIconButton('Calendar', launchCalendar, Icons.calendar_month),
             heightSpacer(25.00),
-            buildRaisedButton('Make Call', launchCALL),
+            buildIconButton(
+                'Contacts', launchContacts, Icons.contacts_outlined),
             heightSpacer(25.00),
-            buildRaisedButton('Send SMS', launchSMS),
+            buildIconButton('Mail', launchMail, Icons.email_outlined),
+            heightSpacer(25.00),
+            buildIconButton('Maps', launchMaps, Icons.map_outlined),
+            heightSpacer(25.00),
+            buildIconButton(
+                'Photos', launchPhotos, Icons.photo_camera_outlined),
             heightSpacer(25.00),
           ],
         ),
@@ -35,6 +41,17 @@ class _MyHomePageState extends State<MyHomePage> {
     return ElevatedButton(
       onPressed: event,
       child: Text(text),
+    );
+  }
+
+  Widget buildIconButton(String text, dynamic event, IconData icon) {
+    return ElevatedButton.icon(
+      icon: Icon(
+        icon,
+        size: 30.0,
+      ),
+      label: Text(text),
+      onPressed: event,
     );
   }
 

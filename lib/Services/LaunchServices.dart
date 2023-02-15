@@ -1,30 +1,33 @@
 import 'package:url_launcher/url_launcher.dart';
 
-launchURL() async {
-  const url = 'https://www.youtube.com/channel/UCBC_Z7jla1GSITcqLKAtPxQ';
+launchGoogle() async {
+  const url = 'https://www.google.com/';
   _launch(url);
 }
 
-launchEMAIL() async {
-  final Uri _emailLaunchUri = Uri(
-    scheme: 'mailto',
-    path: 'example@gmail.com',
-    queryParameters: {
-      'subject': 'Testing URL_LAUNCHER | DEMO',
-      'body': 'MESSAGE'
-    },
-  );
-  _launch(_emailLaunchUri.toString());
+launchCalendar() async {
+  const url = 'https://calendar.google.com';
+  _launch(url);
 }
 
-launchCALL() async {
-  const phonenumber = "tel:9999999999";
-  _launch(phonenumber);
+launchContacts() async {
+  const url = 'https://contacts.google.com';
+  _launch(url);
 }
 
-launchSMS() async {
-  const smsPhoneNumber = "sms:9999999999";
-  _launch(smsPhoneNumber);
+launchMail() async {
+  const url = 'https://mail.google.com';
+  _launch(url);
+}
+
+launchMaps() async {
+  const url = 'https://maps.google.com';
+  _launch(url);
+}
+
+launchPhotos() async {
+  const url = 'https://photos.google.com';
+  _launch(url);
 }
 
 _launch(url) async {
